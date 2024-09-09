@@ -1,10 +1,18 @@
+import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from './constants.js';
+
 const Stats = ({ stats }) => {
   return (
     <section className="stats">
       <Stat description={'Words'} value={stats.numberOfWords} />
       <Stat description={'Characters'} value={stats.numberOfChars} />
-      <Stat description={'Instagram'} value={280 - stats.numberOfChars} />
-      <Stat description={'Facebook'} value={2200 - stats.numberOfChars} />
+      <Stat
+        description={'Instagram'}
+        value={INSTAGRAM_MAX_CHARACTERS - stats.numberOfChars}
+      />
+      <Stat
+        description={'Facebook'}
+        value={FACEBOOK_MAX_CHARACTERS - stats.numberOfChars}
+      />
     </section>
   );
 };
