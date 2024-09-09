@@ -1,10 +1,10 @@
-const Stats = ({ numberOfChars }) => {
+const Stats = ({ stats }) => {
   return (
     <section className="stats">
-      <Stat description={'Words'} value={0} />
-      <Stat description={'Characters'} value={numberOfChars} />
-      <Stat description={'Instagram'} value={280} />
-      <Stat description={'Facebook'} value={2200} />
+      <Stat description={'Words'} value={stats.numberOfWords} />
+      <Stat description={'Characters'} value={stats.numberOfChars} />
+      <Stat description={'Instagram'} value={280 - stats.numberOfChars} />
+      <Stat description={'Facebook'} value={2200 - stats.numberOfChars} />
     </section>
   );
 };
