@@ -1,8 +1,14 @@
+import { useState } from 'react';
+
 const Textarea = () => {
+  const [text, setText] = useState('');
+
   return (
     <textarea
+      value={text}
       onChange={e => {
-        console.log(e.target.value);
+        const newText = e.target.value;
+        setText(newText);
       }}
       className="textarea"
       placeholder="Enter your text here..."
