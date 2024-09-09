@@ -1,4 +1,4 @@
-import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from './constants.js';
+import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from '../lib/constants.js';
 
 const Stats = ({ stats }) => {
   return (
